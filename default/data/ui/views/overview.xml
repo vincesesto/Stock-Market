@@ -1,0 +1,15 @@
+<dashboard>
+  <label>Stock Market Historical Overview</label>
+  <row>
+    <panel>
+      <chart>
+        <title>Historical Overview of Stock Value</title>
+	<search>
+	  <query> <![CDATA[ sourcetype="stockcsv" | chart values(Close) by Date source ]]> </query>
+	  <earliest>-1y@y</earliest>
+        </search>
+        <option name="charting.chart">line</option>
+      </chart>
+    </panel>
+  </row>
+</dashboard>
